@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio04">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio04" package="ejercicio04" visibility="public" xPosition="30.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="radio" type="Integer" visibility="protected"/>
+        <Field name="area" type="Double" visibility="protected"/>
+        <Field name="perimetro" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="radio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CalcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="CalcularArea" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rectangulo" package="entidades" visibility="public" xPosition="277.0" yPosition="313.0">
+      <Fields>
+        <Field name="base" type="Integer" visibility="protected"/>
+        <Field name="altura" type="Integer" visibility="protected"/>
+        <Field name="area" type="Integer" visibility="protected"/>
+        <Field name="perimetro" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="base"/>
+          <Argument type="Integer" name="altura"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CalcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="CalcularArea" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="CalculoFormas" package="Interface" visibility="public" xPosition="666.0" yPosition="203.0">
+      <Methods>
+        <Method name="CalcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="CalcularArea" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="entidades.Circulo" target="Interface.CalculoFormas"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="entidades.Rectangulo" target="Interface.CalculoFormas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
